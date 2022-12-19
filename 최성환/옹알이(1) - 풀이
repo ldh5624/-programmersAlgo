@@ -1,0 +1,17 @@
+function solution(babbling) {
+    var answer = 0;
+    babbling.forEach(function(item){
+        var obj = {aya:0,ye:0,woo:0,ma:0}
+        var temp = "";
+        for(i in obj){
+            if(item.indexOf(i) != -1){
+                ++obj[i];
+                temp += i
+            }
+        }
+        if(temp.length == item.length){
+         ++answer; 
+        }
+    })
+    return answer;
+}
