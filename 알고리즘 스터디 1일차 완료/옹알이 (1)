@@ -1,0 +1,26 @@
+public class lvZero1_1 {
+    public static int solution(String[] babbling) {
+        String[] can = new String[]{"aya", "ye", "woo", "ma"};
+        String[] same = new String[]{"ayaaya","yeye","woowoo","mama"};
+        int cnt = 0;
+        for(int i=0; i<babbling.length; i++){
+            String tmp = babbling[i];
+            for(int j=0; j< same.length; j++){
+                tmp = tmp.replace(same[j],"*");
+            }
+            for(int j=0; j<can.length; j++){
+                    tmp = tmp.replace(can[j],"");
+            }
+            if(tmp.length() == 0 ){
+                cnt++;
+            }
+        }
+        System.out.println("cnt :" + cnt);
+        return cnt;
+    }
+    public static void main(String[] args) {
+        String[] babbling = new String[]{"ayaye", "yewoo","mawoo","jisuwoo","ayaaya","yema"};
+        solution(babbling);
+    }
+
+}
