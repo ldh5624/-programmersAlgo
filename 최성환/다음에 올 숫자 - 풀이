@@ -1,0 +1,14 @@
+function solution(common) {
+    var answer = 0;
+    //등차수열일 때,
+    if(common[1]-common[0] == common[2]-common[1]){
+        answer = common[0]+(common[1]-common[0])*common.length
+    //등비수열일 때,
+    }else if(common[1]-common[0] != common[2]-common[1]){
+        answer = common[0]*Math.pow((common[1]/common[0]),common.length)
+    //아무것도 아닐 떄,
+    }else{
+        answer = 0
+    }
+    return answer;
+}
