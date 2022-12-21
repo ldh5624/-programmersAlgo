@@ -1,0 +1,9 @@
+function solution(my_str, n) {
+    var answer = [];
+    var num = my_str.length/n;
+    for(var i=0;i<num;i++){
+        tmp = my_str.slice(n*i,n*i+n)
+        answer.push(tmp)
+    }
+    return answer;
+}

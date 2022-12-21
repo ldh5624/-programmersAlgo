@@ -1,0 +1,21 @@
+function solution(num, total) {
+    var answer = [];
+    if(num%2 == 1){
+        var std = total/num;
+        var temp = (num-1)/2;
+        for(var i=std-temp;i<=std+temp;i++){
+            answer.push(i)
+        }
+    }else{
+        var std = total/num;
+        var temp = num/2-1;
+        for(var i=Math.floor(std-temp);i<=Math.ceil(std+temp);i++){
+            if(std>std-temp){
+                answer.push(Math.floor(i))
+            }else{
+                answer.push(Math.ceil(i))
+            }
+        }
+    }
+    return answer;
+}
