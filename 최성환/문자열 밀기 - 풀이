@@ -1,0 +1,17 @@
+function solution(A, B) {
+    var answer = -1;
+    if(A == B){
+            answer = 0;
+    }else{
+         var tmp_A = A;
+         for(var i=0;i<A.length;i++){
+            tmp_A = tmp_A[A.length-1]+tmp_A
+            tmp_A = tmp_A.slice(0,-1)
+            if(tmp_A == B){
+                answer = i+1;
+                break;
+            }
+        }   
+    }
+    return answer;
+}
