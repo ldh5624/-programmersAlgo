@@ -1,0 +1,10 @@
+import java.util.Arrays;
+class Solution {
+    public String solution(String my_string) {
+       my_string= my_string.toLowerCase();
+        char[] splt = my_string.toCharArray();
+        Arrays.sort(splt);
+        String answer = new String(splt);
+        return answer;
+    }
+}
