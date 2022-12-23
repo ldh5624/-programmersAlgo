@@ -1,0 +1,22 @@
+class Solution {
+    public int solution(int[] array) {
+        int answer = 0;
+            int[] A = new int[array.length];
+
+            for(int i=0; i<A.length ;i++) {
+                String cnt = String.valueOf(array[i]);
+                char[] cnt_c = cnt.toCharArray();
+                if(cnt_c.length == 1 && cnt.equals("7")){
+                    answer++;
+                }
+                if( cnt_c.length > 1 ){
+                    for(int j=0; j<cnt_c.length; j++) {
+                        if(cnt_c[j] == '7'){
+                            answer++;
+                     }
+                    }
+                }
+            }
+            return answer;
+    }
+}
