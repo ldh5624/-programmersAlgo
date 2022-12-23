@@ -1,0 +1,5 @@
+ int answer = n;
+        for(int i=1; i<t+1; i++) {
+            answer*=2;
+        }
+        return answer;
