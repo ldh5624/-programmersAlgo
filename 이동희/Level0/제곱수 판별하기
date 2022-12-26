@@ -1,0 +1,23 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 1;
+        boolean a=true;
+
+        int tmp = 1;
+        while (a){
+            if(n==tmp*tmp){
+                answer = 1;
+                a = false;
+
+            }else if((tmp*tmp)>1000000){
+                answer = 2;
+                a = false;
+            }
+            tmp++;
+
+        }
+
+
+        return answer;
+    }
+}
