@@ -1,0 +1,8 @@
+function solution(num, k) {
+    var answer = -1;
+    var temp_num = num + "";
+    if(temp_num.indexOf(k) != -1){
+     answer = temp_num.indexOf(k)+1   
+    }
+    return answer;
+}
