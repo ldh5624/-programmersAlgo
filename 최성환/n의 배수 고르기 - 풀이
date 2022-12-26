@@ -1,0 +1,7 @@
+function solution(n, numlist) {
+    var answer = [];
+    numlist.map(function(i,j){
+        if(i%n == 0){answer.push(i)}
+    })
+    return answer;
+}

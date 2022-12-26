@@ -1,0 +1,15 @@
+function solution(n) {
+    var answer = 1;
+    var obj_n = {};
+    for(var i =2; i<=n;i++){
+        obj_n[i]=0
+        while(n%i == 0){
+            n /= i;
+            ++obj_n[i];
+        }
+        if(obj_n[i]%2 == 1){
+            answer = 2
+        }
+    }
+    return answer;
+}
