@@ -1,0 +1,12 @@
+function solution(my_string) {
+    var test = my_string.split(" ");
+    var answer = +test[0];
+    for(var i=1;2*i<test.length;i++){
+        if(test[2*i-1]=='+'){
+           answer += +test[2*i]
+        }else if(test[2*i-1] == '-'){
+            answer -= +test[2*i]
+        }
+    }
+    return answer;
+}

@@ -1,0 +1,7 @@
+function solution(s1, s2) {
+    var answer = 0;
+    var temp = s1.filter(function(x){
+        return s2.includes(x)
+    })
+    return temp.length;
+}
