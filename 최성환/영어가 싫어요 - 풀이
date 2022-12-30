@@ -1,0 +1,15 @@
+function solution(numbers) {
+    var answer = 0;
+    var test = numbers
+    test = test.replaceAll("zero",0)
+    test = test.replaceAll("one",1)
+     test = test.replaceAll("two",2)
+     test = test.replaceAll("three",3)
+     test = test.replaceAll("four",4)
+     test = test.replaceAll("five",5)
+     test = test.replaceAll("six",6)
+     test = test.replaceAll("seven",7)
+     test = test.replaceAll("eight",8)
+     test = test.replaceAll("nine",9)
+    return +test;
+}
