@@ -1,0 +1,12 @@
+function solution(array, n) {
+    var answer = 0;
+    var temp = [...array];
+    console.log(temp)
+    array.sort(function(a,b){return a-b})
+    console.log(temp)
+    var test = array.map(function(v){
+        return Math.abs(v-n)
+    });
+    answer_index = test.indexOf(Math.min(...test))
+    return array[answer_index];
+}

@@ -1,0 +1,12 @@
+function solution(sides) {
+    var answer = 0;
+    var index_max_sides = sides.indexOf(Math.max(...sides))
+    var max_sides = Math.max(...sides)
+    sides.splice(index_max_sides,1)
+    var sum = 0;
+    sides.map(function(v){
+        sum += v;
+    })
+    answer = sum>max_sides ? 1:2
+    return answer;
+}
