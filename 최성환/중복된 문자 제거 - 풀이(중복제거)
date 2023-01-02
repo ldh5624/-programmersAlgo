@@ -1,0 +1,9 @@
+function solution(my_string) {
+    var answer = '';
+    var my_str_arr = [...my_string];
+    my_str_arr.map(function(v,w){
+        if(my_str_arr.indexOf(v) ==w){answer += v}
+    })
+    console.log(answer)
+    return answer;
+}
