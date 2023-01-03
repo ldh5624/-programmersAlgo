@@ -1,0 +1,13 @@
+function solution(bin1, bin2) {
+    var answer = '';
+    var sum = 0;
+    var bin1_decimal = 0;
+    var bin2_decimal = 0;
+    [...bin1].reverse().map(function(x,y){
+        bin1_decimal += Number(x)*Math.pow(2,y);
+    });
+    [...bin2].reverse().map(function(x,y){
+        bin2_decimal += Number(x)*Math.pow(2,y);
+    });
+    return (bin1_decimal + bin2_decimal).toString(2);
+}
