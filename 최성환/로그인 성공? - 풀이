@@ -1,0 +1,11 @@
+function solution(id_pw, db) {
+    var answer = "fail"
+    db.map(function(x){
+        if(x.join("")==id_pw.join("")){
+            answer = "login";
+        }else if(id_pw[0] == x[0] && id_pw[1] != x[1] ){
+            answer = "wrong pw";
+        }
+    })
+    return answer;
+}
