@@ -1,0 +1,12 @@
+function solution(my_string) {
+    var answer = '';
+    var regex = /[A-z]/g;
+    var test = my_string.replace(regex,function(v){
+        if(v == v.toLowerCase()){
+            return v.toUpperCase();
+        }else{
+            return v.toLowerCase();
+        }
+    })
+    return test;
+}
