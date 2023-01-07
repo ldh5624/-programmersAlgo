@@ -1,0 +1,10 @@
+function solution(numlist, n) {
+    var answer = [];
+    answer = numlist.sort(function(a,b){
+        const [agab,bgab] = [Math.abs(a-n),Math.abs(b-n)]
+        console.log(agab,bgab)
+        if(agab===bgab){ return b-a}
+        return agab-bgab
+    })
+    return answer;
+}

@@ -1,0 +1,9 @@
+function solution(cipher, code) {
+    var answer = '';
+    for(i in cipher){
+        if(i%code == code-1){
+            answer += cipher[i]
+        }
+    }
+    return answer;
+}

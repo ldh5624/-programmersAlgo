@@ -1,0 +1,23 @@
+function solution(score) {
+    var answer = [];
+    var rank = [];
+    var now = 0;
+    var champ = 1;
+    score.map(function(a){
+        var sum = a.reduce(function(acc,v){
+            return acc+=v;
+        })
+        rank.push(sum)
+    })
+    rank.sort(function(a,b){return b-a});
+    console.log(rank)
+
+    score.map(function(a){
+        var sum2 = a.reduce(function(acc,v){
+            return acc+=v;
+        })
+        answer.push(rank.indexOf(sum2) + 1)
+    })
+
+    return answer;
+}

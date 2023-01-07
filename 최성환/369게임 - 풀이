@@ -1,0 +1,8 @@
+function solution(order) {
+    var answer = 0;
+    var order_str = ""+order
+    for(i in order_str){
+        if(order_str[i] == '3' || order_str[i] == '6' || order_str[i] == '9') {++answer}
+    }
+    return answer;
+}

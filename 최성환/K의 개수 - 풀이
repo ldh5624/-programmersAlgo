@@ -1,0 +1,10 @@
+function solution(i, j, k) {
+    var answer = 0;
+    for(i;i<=j;i++){
+        num_arr = [...(i+"")];
+        num_arr.map(function(v){
+            if(v == k){++answer}
+        })
+    }
+    return answer;
+}
