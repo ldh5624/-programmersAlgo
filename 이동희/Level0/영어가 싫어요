@@ -1,0 +1,34 @@
+class Solution {
+    public long solution(String numbers) {
+        long answer = 0;
+     	 	        String test = numbers;
+       
+   
+    	  
+       	test = test.replace("zero","0" );	
+       
+      
+       	test=test.replace("one","1");	
+       
+    
+       	test=test.replaceAll("two", "2");	
+    
+  
+       	test=test.replaceAll("three", "3");	
+  
+       	test=test.replaceAll("four", "4");	
+       	test=	test.replaceAll("five", "5");	
+       	test=test.replaceAll("six", "6");	
+       	test=test.replaceAll("seven", "7");	
+       	test=test.replaceAll("eight", "8");	
+       	test=test.replaceAll("nine", "9");	
+       answer = Long.parseLong(test);
+	        
+
+        return answer;
+    }
+}
+
+
+
+https://school.programmers.co.kr/learn/courses/30/lessons/120894
