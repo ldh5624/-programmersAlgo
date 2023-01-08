@@ -1,0 +1,19 @@
+class Solution {
+    public String solution(String my_string, int num1, int num2) {
+        String answer = "";
+        
+        String[] test  = my_string.split("");
+        
+        
+        
+        
+        String s1 = test[num1];
+        String s2 = test[num2];
+         
+        
+        test[num1] = s2;
+        test[num2] = s1;
+          answer = answer.join("", test);
+        return answer;
+    }
+}
