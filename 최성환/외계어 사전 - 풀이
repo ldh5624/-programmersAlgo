@@ -1,0 +1,11 @@
+function solution(spell, dic) {
+    var answer = 2;
+    spell.sort()
+    var test = spell.join("");
+    var test_arr = dic.map(function(v){
+        test2 = v.split("").sort().join("")
+        return test2
+    }) 
+    test_arr.includes(test)?answer=1:answer
+    return answer;
+}
