@@ -1,0 +1,11 @@
+class Solution {
+    public int solution(int n) {
+           int answer = 0;
+        String num = String.valueOf(n);
+        char[] numC = num.toCharArray();
+        for(int i=0; i<numC.length; i++){
+           answer+= numC[i] - '0';
+        }
+        return answer;
+    }
+}
