@@ -1,0 +1,13 @@
+function solution(dots) {
+    var answer = 0;
+    var test = [];
+    for(var i=0;i<dots.length;i++){
+        for(var j=i+1;j<dots.length;j++){
+            test.push(Math.abs(dots[i][1]-dots[j][1])/Math.abs(dots[i][0]-dots[j][0]))
+        }
+    }
+    test.map(function(v){
+        if(test.indexOf(v) != test.lastIndexOf(v)){answer = 1}
+    })
+    return answer;
+}
