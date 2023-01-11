@@ -1,0 +1,30 @@
+import java.util.*;
+class Solution {
+    public String solution(String s) {
+          StringBuilder stringBuilder = new StringBuilder();
+        ArrayList list = new ArrayList();
+        int cnt=0;
+        String[] ss = s.split("");
+        for(int i=0; i<ss.length; i++){
+            for(int j=0; j<ss.length; j++){
+                if(ss[j].equals(ss[i])){
+                    cnt++;
+                }
+            }
+            if(cnt == 1 ){
+                list.add(ss[i]);
+            }
+            cnt = 0;
+        }
+        String[] tot = new String[list.size()];
+        for(int k=0; k< list.size(); k++){
+            tot[k] = (String) list.get(k);
+        }
+        Arrays.sort(tot);
+        for(String j : tot){
+            stringBuilder.append(j);
+        }
+        String answer = stringBuilder.toString();
+                    return answer;
+    }
+}
