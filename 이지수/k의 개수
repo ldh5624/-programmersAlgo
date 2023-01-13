@@ -1,0 +1,14 @@
+class Solution {
+    public int solution(int i, int j, int k) {
+        StringBuilder sp = new StringBuilder();
+        int answer = 0;
+        for(int n=i; n<j+1; n++){
+            sp.append(n);
+        }
+        String[] num = sp.toString().split("");
+        for(int m=0; m<num.length; m++){
+            if(num[m].contains(String.valueOf(k)))answer++;
+        }
+        return answer;
+    }
+}
