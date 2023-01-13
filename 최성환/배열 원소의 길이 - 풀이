@@ -1,0 +1,7 @@
+function solution(strlist) {
+    var answer = [];
+    strlist.map(function(v){
+        answer.push(v.length)
+    })
+    return answer;
+}

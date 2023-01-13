@@ -1,0 +1,11 @@
+function solution(s) {
+    var answer = 0;
+    s.split(" ").map(function(a,b){
+        if(a=="Z"){
+            answer -= Number(s.split(" ")[b-1])
+        }else{
+            answer += Number(a)
+        }
+    })
+    return answer;
+}
