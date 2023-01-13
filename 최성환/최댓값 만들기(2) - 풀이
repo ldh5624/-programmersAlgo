@@ -1,0 +1,11 @@
+function solution(numbers) {
+    var answer = 0;
+    var test_arr = [];
+    numbers.map(function(a,b,c,){
+        c.map(function(x,y){
+            if(b!=y)
+            test_arr.push(a*x)
+        })
+    })
+    return Math.max(...test_arr);
+}
