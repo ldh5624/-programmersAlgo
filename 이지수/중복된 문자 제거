@@ -1,0 +1,16 @@
+import java.util.*;
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        String[] alp = my_string.split("");
+        Set<String> set = new LinkedHashSet<>();
+        for(String a : alp){
+            set.add(a);
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        for(String b : set){
+            stringBuilder.append(b);
+        }answer = stringBuilder.toString();
+        return answer;
+    }
+}

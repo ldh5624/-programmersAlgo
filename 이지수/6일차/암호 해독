@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+class Solution {
+    public String solution(String cipher, int code) {
+        String answer = "";
+        String[] alp = cipher.split("");
+        StringBuilder stringBuilder = new StringBuilder();
+        ArrayList<String> list = new ArrayList<String>();
+        for(int i=0; i<alp.length; i++){
+            if(i%code == code-1){
+                list.add(alp[i]);
+            }
+        }
+        for(String a : list){
+            stringBuilder.append(a);
+        }
+        answer = stringBuilder.toString();
+        return answer;
+    }
+}

@@ -1,0 +1,26 @@
+class Solution {
+    public String solution(String my_string, int num1, int num2) {
+        StringBuilder stringBuilder = new StringBuilder();
+        String answer = "";
+        String tmp1 = "";
+        String tmp2 = "";
+        String[] input = my_string.split("");
+        for(int i =0; i<input.length; i++){
+            if(i == num1){
+              tmp1 = input[i];
+            }
+        }
+        for(int j=0; j<input.length; j++){
+            if(j == num2){
+              tmp2 = input[j];
+            }
+        }
+        input[num1] = tmp2;
+        input[num2] = tmp1;
+            for(String k : input){
+                stringBuilder.append(k);
+            }
+            answer = stringBuilder.toString();
+            return answer;
+    }
+}
