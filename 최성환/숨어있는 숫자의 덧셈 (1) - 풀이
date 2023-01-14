@@ -1,0 +1,9 @@
+function solution(my_string) {
+    var answer = 0;
+    var regexp = /[a-zA-z]/g
+    my_string = my_string.replace(regexp,"")
+    my_string.split("").map(function(a){
+        answer += Number(a)
+    })
+    return answer;
+}

@@ -1,0 +1,28 @@
+function solution(keyinput, board) {
+    var answer = [0,0];
+    keyinput.map(function(v){
+        switch(v){
+            case "up":
+                if(answer[1]<Math.floor(board[1]/2)){
+                    answer[1]++
+                }
+                break;
+            case "down":
+                if(answer[1]>(Math.floor(board[1]/2)*-1)){
+                    answer[1]--
+                }
+                break;
+            case "left":
+                if(answer[0]>(Math.floor(board[0]/2)*-1)){
+                    answer[0]--
+                }
+                break;
+            case "right":
+                if(answer[0]<Math.floor(board[0]/2)){
+                    answer[0]++
+                }
+                break;
+        }
+    })
+    return answer;
+}

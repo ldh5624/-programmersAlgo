@@ -1,0 +1,24 @@
+function solution(polynomial) {
+    var answer = '';
+    var x_sum = 0;
+    var num_sum = 0;
+    var test = polynomial.split(" ").map(function(v){
+        if(v === "x"){v = "1x"}
+        if(v.indexOf("x") != -1){
+            x_sum += Number(v.split("x")[0])
+        }else if(Number(v) >= 0){
+            num_sum += Number(v)
+        }
+    })
+    if(x_sum>0 && num_sum>0){
+        answer = x_sum+"x"+" + "+num_sum;
+    }else if(x_sum==0 && num_sum>=0){
+        answer = num_sum + ""
+    }else if(x_sum>0 && num_sum ==0){
+        answer = x_sum+"x"
+    }
+    if(x_sum == 1){
+        answer = answer.replace("1x","x")
+    }
+    return answer;
+}
