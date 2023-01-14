@@ -1,0 +1,14 @@
+function solution(n) {
+    var answer = [];
+    var dividend = 2;
+    while(n>1){
+        if(n%dividend == 0){
+            n /= dividend
+            answer.push(dividend)
+        }else{
+            dividend++;
+        }
+    }
+    var test = new Set(answer)
+    return [...test];
+}
