@@ -1,0 +1,21 @@
+class Solution {
+    public int solution(int[] array, int n) {
+        int answer = 0;
+           
+	        int min = Math.abs(n-array[0]);
+	        answer = array[0];
+	        for(int i=1;i<array.length;i++) {
+	             int temp = Math.abs(n-array[i]);
+	             if(min>temp) {
+	            	 min = temp;
+	            	 answer = array[i];
+	             }else if(min==temp) {
+	            	 if(answer > array[i]) {
+	            		 answer = array[i];
+	            	 }
+	             }
+            
+	        }
+        return answer;
+    }
+}
