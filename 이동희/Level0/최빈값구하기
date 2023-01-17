@@ -1,0 +1,29 @@
+class Solution {
+    public int solution(int[] array) {
+        
+		int answer = 0;
+
+		int maxcnt = 0;
+		
+		for (int i = 0; i < array.length; i++) {
+
+			int tmp = 0;
+
+			for (int j = 0; j < array.length; j++) {
+				if (array[i] == array[j]) {
+					tmp++;
+				}
+			}
+
+			if (maxcnt < tmp) {
+				maxcnt = tmp;
+				answer = array[i];
+			}else if(maxcnt ==tmp && answer != array[i]) {
+				answer = -1;
+			}
+		}
+
+		return answer;
+	
+    }
+}
