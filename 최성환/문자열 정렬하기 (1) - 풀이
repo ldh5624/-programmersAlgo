@@ -1,0 +1,7 @@
+function solution(my_string) {
+    var answer = [];
+    my_string.replace(/[a-zA-Z]/g,"").split("").map(function(v){
+        answer.push(+v);
+    })
+    return answer.sort(function(a,b){return a-b})
+}
