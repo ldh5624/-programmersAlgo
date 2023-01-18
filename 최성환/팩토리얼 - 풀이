@@ -1,0 +1,14 @@
+function solution(n) {
+    var answer = 0;
+    var dividend = 1;
+    while(n>dividend){
+        n=n/dividend
+        dividend++
+    }
+    if(n==dividend){
+        answer = dividend
+    }else{
+        answer = dividend-1
+    }
+    return answer;
+}
