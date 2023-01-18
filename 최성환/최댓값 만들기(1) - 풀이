@@ -1,0 +1,7 @@
+function solution(numbers) {
+    var answer = 0;
+    numbers = numbers.sort(function(a,b){
+        return b-a;
+    })
+    return numbers[0]*numbers[1];
+}
