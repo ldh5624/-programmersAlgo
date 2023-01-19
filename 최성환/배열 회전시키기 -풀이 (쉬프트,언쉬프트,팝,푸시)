@@ -1,0 +1,14 @@
+function solution(numbers, direction) {
+    var answer = numbers;
+    switch(direction){
+        case "right":
+            var temp = numbers.pop()
+            numbers.unshift(temp)
+            break;
+        case "left":
+            var temp = numbers.shift()
+            numbers.push(temp)
+            break;
+    }
+    return answer;
+}
