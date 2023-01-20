@@ -1,0 +1,20 @@
+import java.util.Arrays;
+class Solution {
+    public int[] solution(int[][] score) {
+      int[] answer = new int[score.length];
+        double[] level = new double[score.length];
+        double avg =0;
+        int num =101;
+        Arrays.fill(answer,1);
+        for(int i=0; i<score.length; i++){
+            avg = ((double)score[i][0]+score[i][1])/2;
+            level[i] = avg;
+        }
+        for(int k=0; k<score.length; k++){
+            for(int j=0; j<score.length; j++){
+                if(level[k]<level[j])answer[k]++;
+            }
+        }
+        return answer;
+    }
+}

@@ -1,0 +1,18 @@
+class Solution {
+    public int[] solution(int[] numlist, int n) {
+        for (int i = 0; i < numlist.length - 1; i++) { 
+            for (int k = i + 1; k < numlist.length; k++) { 
+                int a = (numlist[i] - n) * (numlist[i] > n ? 1 : -1); 
+                int b = (numlist[k] - n) * (numlist[k] > n ? 1 : -1); 
+                
+                if (a > b || (a == b && numlist[i] < numlist[k])) { 
+                    int temp = numlist[i];
+                    numlist[i] = numlist[k];
+                    numlist[k] = temp;
+                }
+            }
+        }
+        
+        return numlist; 
+    }
+}
