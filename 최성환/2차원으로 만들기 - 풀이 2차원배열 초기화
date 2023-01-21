@@ -1,0 +1,7 @@
+function solution(num_list, n) {
+    const arr2D = Array.from(Array(Math.floor(num_list.length/n)), () => Array(n).fill(0))
+    num_list.map(function(v,w){
+        arr2D[Math.floor(w/n)][w%n] = v
+    })
+    return arr2D;
+}
