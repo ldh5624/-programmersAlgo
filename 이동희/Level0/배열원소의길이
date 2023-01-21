@@ -1,0 +1,11 @@
+class Solution {
+    public int[] solution(String[] strlist) {
+ int[] answer = new int[strlist.length];
+	        int i=0;
+	        for(String a : strlist) {
+ 	        	answer[i] = a.split("").length;
+ 	        	i++;
+	        }
+        return answer;
+    }
+}
