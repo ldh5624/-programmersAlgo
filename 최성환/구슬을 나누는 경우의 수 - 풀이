@@ -1,0 +1,12 @@
+function solution(balls, share) {
+    var answer = 0;
+    var up = 1;
+    var down = 1;
+    for(var i=0;i<balls-share;i++){
+        up *= balls-i;
+    }
+    for(var j=1;j<=balls-share;j++){
+        down *= j
+    }
+    return Math.floor(up/down);
+}
