@@ -1,0 +1,29 @@
+https://school.programmers.co.kr/learn/courses/30/lessons/120888
+
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
+class Solution {
+    public String solution(String my_string) {
+        String answer = "";
+        
+        
+        String[] splited = my_string.split("");
+        List<String> list = new ArrayList<String>();
+        
+
+        for(String item : splited) {
+            if(list.contains(item) == false) {
+                list.add(item);
+                answer += item;
+            }
+        }
+
+        
+        return answer;
+    }
+}
