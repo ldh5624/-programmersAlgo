@@ -1,0 +1,11 @@
+function solution(emergency) {
+    var answer = [];
+    var test = [...emergency]
+    test.sort(function(a,b){
+        return b-a;
+    })
+    answer = emergency.map(function(v){
+        return test.indexOf(v)+1
+    })
+    return answer;
+}

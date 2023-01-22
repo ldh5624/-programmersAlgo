@@ -1,0 +1,7 @@
+function solution(n, k) {
+    var answer = 0;
+    var freedrink = Math.floor(n/10)
+    var drink = k-freedrink;
+    answer = n*12000 + drink*2000
+    return answer;
+}
