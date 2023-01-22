@@ -1,0 +1,18 @@
+class Solution {
+    public int solution(String[] babbling) {
+        String[] dekiru = {"aya", "ye", "woo", "ma"};
+        int answer = 0;
+        String str = " ";
+
+        for(int i = 0; i < babbling.length; i++){
+            for(int j = 0; j < dekiru.length; j++){
+                babbling[i] = babbling[i].replace(dekiru[j], str);
+            }
+
+            if(babbling[i].replaceAll(str, "").equals("")){
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
