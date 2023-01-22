@@ -1,0 +1,16 @@
+function solution(array) {
+    var answer = 0;
+    var length = 1;
+    var test = {};
+    array.sort(function(a,b){return a-b})
+    array.map(function(a,b,c){
+        test[a] = c.filter(function(v){return v==a}).length
+    })
+    var maxNum = Object.values(test).sort(function(a,b){return b-a})[0]
+    if(Object.values(test).indexOf(maxNum) != Object.values(test).lastIndexOf(maxNum)){
+        answer = -1
+    }else{
+        answer = +Object.keys(test)[Object.values(test).indexOf(maxNum)]
+    }
+    return answer;
+}

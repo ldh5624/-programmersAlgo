@@ -1,0 +1,10 @@
+function solution(n) {
+    var answer = 0;
+    while(1){
+        if(Math.floor(7*answer/n) >0){
+            break;
+        }
+        answer++;
+    }
+    return answer;
+} 

@@ -1,0 +1,12 @@
+function solution(numer1, denom1, numer2, denom2) {
+    var test1 = numer1*denom2+numer2*denom1;
+    var test2 = denom1*denom2;
+    var num = test1>=test2?test1:test2 
+    var gnum = 0
+    for(var i = 1;i<=num;i++){
+        if(test1%i == 0 && test2%i == 0){
+            gnum = i
+        }
+    }
+    return [test1/gnum,test2/gnum]
+}
