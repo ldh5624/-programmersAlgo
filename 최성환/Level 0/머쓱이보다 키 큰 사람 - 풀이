@@ -1,0 +1,5 @@
+function solution(array, height) {
+    return array.filter(function(v){
+        return v>height
+    }).length
+}

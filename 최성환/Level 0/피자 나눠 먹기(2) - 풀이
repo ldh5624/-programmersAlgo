@@ -1,0 +1,11 @@
+function solution(n) {
+    var answer = 0;
+    var gnum = 1;
+    for(var i =1;i<=n;i++){
+        if(6%i==0 && n%i==0){
+            gnum = i
+        }
+    }
+    answer = 6*n/gnum/6
+    return answer;
+}
