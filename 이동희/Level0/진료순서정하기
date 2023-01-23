@@ -1,0 +1,25 @@
+import java.util.Arrays;
+class Solution {
+    public int[] solution(int[] emergency) {
+  int[] answer = new int[emergency.length];
+	        
+	        int[] tmp = new int[emergency.length];
+	        tmp =emergency.clone();
+	        
+	        Arrays.sort(emergency);
+	        int idx= 0;
+	       for(int i : tmp) {
+	    	   for(int j=0;j< emergency.length;j++) {
+	    		   System.out.println(i +": " +emergency[j]);
+	    		   if(i==emergency[j]) {
+	    			   
+	    			   answer[idx] = emergency.length-j;
+	    			   idx++;
+	    			   break;
+	    		   }
+	    	   }
+	       }
+	        
+        return answer;
+    }
+}
