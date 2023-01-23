@@ -1,0 +1,32 @@
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Arrays;
+
+class Solution {
+    public int[] solution(int n) {
+       Set<Integer> set = new HashSet<>();
+
+	    	int i=2;
+	       while(n!=1) {
+	    	   System.out.println(n);
+	    	   if(n%i == 0) {
+	    		   set.add(i);
+	    		   n = n/i;
+	    	   }else {
+	    		   i++;
+	    	   }
+	       }
+	       Object[] aa=  set.toArray();
+	       int[] answer = new int[set.size()];
+	       
+	       for(int j=0;j<set.size();j++) {
+	    	   answer[j] = (int) aa[j];
+	       }
+	       
+Arrays.sort(answer);
+	       
+	        return answer;
+    }
+}
