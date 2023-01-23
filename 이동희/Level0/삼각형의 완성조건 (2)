@@ -1,0 +1,24 @@
+class Solution {
+    public int solution(int[] sides) {
+        int answer = 0;
+        
+        int max = sides[0];
+        int min = sides[1];
+        if(sides[0]<sides[1]){
+            max = sides[1];
+            min = sides[0];
+        }
+        
+        for(int i=1;i<=max;i++){
+            if(min+i >max){
+                answer++;
+            }
+        }
+        
+        answer += (min-1);
+        
+        
+        
+        return answer;
+    }
+}
