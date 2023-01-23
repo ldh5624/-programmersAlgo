@@ -1,0 +1,22 @@
+class Solution {
+    public int solution(String my_string) {
+        int answer = 0;
+	        
+	        String intStr = my_string.replaceAll("[^0-9]", " ");
+	        
+	        String[] tmp = intStr.split(" ");
+	        
+	        
+	        for(String a : tmp) {
+	        	String aa = a.trim();
+	        	if(!aa.equals("")) {
+	        		
+	        		answer += Integer.parseInt(aa);
+	        	};
+	        }
+	        
+	        
+	        
+	        return answer;
+    }
+}
