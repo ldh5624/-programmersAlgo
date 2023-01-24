@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int n) {
+        int a = 0;
+
+        if(n % 2 == 0){
+            a = n / 2;
+        }else{
+            a = n / 2 + 1;
+        }
+
+        int[] answer = new int[a];
+
+        for(var i = 0; i < a; i++){
+            answer[i] = (2 * i) + 1;
+        }
+
+        return answer;
+    }
+}
