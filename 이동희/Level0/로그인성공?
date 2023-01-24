@@ -1,0 +1,37 @@
+class Solution {
+    public String solution(String[] id_pw, String[][] db) {
+        String answer = "";
+        
+        boolean loginId = false;
+        boolean loginPw = false;
+        
+        for(int i=0;i<db.length;i++){
+            if(id_pw[0].equals(db[i][0])){
+                loginId = true;
+            }
+             if(id_pw[1].equals(db[i][1])){
+                loginPw = true;
+            }
+            
+            
+            if(loginId&&loginPw){
+                answer = "login";
+                return answer;
+            }else if(loginId && !loginPw){
+                answer = "wrong pw";
+                
+            }else if(!loginId && loginPw && !answer.equals("wrong pw") ){
+                answer = "fail";
+            }
+            
+                loginId = false;
+                loginPw = false;
+            
+      
+            
+            
+        }
+        
+        return answer;
+    }
+}
