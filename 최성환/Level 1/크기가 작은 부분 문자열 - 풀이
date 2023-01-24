@@ -1,0 +1,16 @@
+function solution(t, p) {
+    var answer = 0;
+    var test = t.split("").map(function(v,w,z){
+        if(w<=z.length-p.length){
+            return z.slice(w,w+p.length).join("")
+        }else{
+            return "99999"
+        }
+    })
+    test.map(function(v){
+        if(p>=v){
+            answer++
+        }
+    })
+    return answer;
+}
