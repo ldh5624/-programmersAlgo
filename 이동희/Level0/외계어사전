@@ -1,0 +1,22 @@
+class Solution {
+    public int solution(String[] spell, String[] dic) {
+       int answer = 2;
+		for (String a : dic) {
+			answer = 2;
+
+			for (String sp : spell) {
+
+				if (a.contains(sp)) {
+					answer = 1;
+				} else {
+					answer = 2;
+					break;
+				}
+			}
+			if (answer == 1) {
+				return answer;
+			}
+		}
+		return answer;
+    }
+}
