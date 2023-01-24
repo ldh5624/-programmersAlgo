@@ -1,0 +1,19 @@
+function solution(today, terms, privacies) {
+    var answer = [];
+    var obj_terms = {};
+    var td_arr = today.split(".")
+    terms.map(function(v){
+        obj_terms[v.split(" ")[0]] = v.split(" ")[1]*28
+    });
+    privacies.map(function(v,w){
+        var v_arr = v.split(" ")[0].split(".")
+        var validate = obj_terms[v.split(" ")[1]]
+        var y = (td_arr[0]-v_arr[0])*12*28
+        var m = (td_arr[1]-v_arr[1])*28
+        var d = (td_arr[2]-v_arr[2])
+        if(y+m+d>=validate){
+          answer.push(w+1)   
+        }
+    })
+    return answer;
+}
