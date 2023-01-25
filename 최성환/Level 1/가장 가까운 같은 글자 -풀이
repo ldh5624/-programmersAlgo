@@ -1,0 +1,11 @@
+function solution(s) {
+    var answer = [];
+    s.split("").map(function(v,w,z){
+        if(s.indexOf(v) == w){
+            answer.push(-1)
+        }else{
+            answer.push(w-s.slice(0,w).lastIndexOf(v))
+        }
+    })
+    return answer;
+}
