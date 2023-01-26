@@ -1,0 +1,45 @@
+class Solution {
+    public String solution(String polynomial) {
+              String answer = "";
+	        int answerx = 0;
+	        int answeri = 0;
+	        
+	        
+	        String[] tmp = polynomial.split(" ");
+	        for(String a : tmp) {
+	        	if(a.contains("x")) {
+	        		if(a.equals("x")) {
+	        			answerx +=1;
+	        		}else {
+	        			answerx += Integer.parseInt(a.replace("x",""));
+	        		}
+	        		
+	        	}else {
+	        		if(!a.equals("+")) {
+	        		answeri += Integer.parseInt(a);
+	        		}
+	        	}
+	        }
+	        
+            if(answeri != 0){
+                if(answerx == 1){
+                    answer = "x + " + String.valueOf(answeri);
+                }else if(answerx == 0 ){
+                    answer = String.valueOf(answeri);
+                }else{
+	                answer = String.valueOf(answerx) +"x + "+String.valueOf(answeri);
+                }
+            }else{
+                if(answerx == 1){
+                    answer = "x";
+                }else if(answerx == 0 ){
+                    answer = "0";
+                }else{
+                 answer = String.valueOf(answerx) +"x";   
+                }
+                 
+            }
+        
+	        return answer;
+    }
+}
