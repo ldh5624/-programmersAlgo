@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+class Solution {
+    public int[] solution(String today, String[] terms, String[] privacies) {
+   List<Integer> list = new ArrayList<>();
+        String[] tody = today.split("\\.");
+        int todayD = Integer.parseInt(tody[0])*12*28+Integer.parseInt(tody[1])*28+Integer.parseInt(tody[2]);
+            Map<String, Integer> map = new HashMap<>();
+            for(int j=0; j< terms.length; j++){
+                String[] p = terms[j].split(" ");
+                map.put(p[0], Integer.parseInt(p[1]));
+            }
+
+            for(int i=0; i<privacies.length; i++){
+                String year = privacies[i].substring(0,4);
+                String mon = privacies[i].substring(5,7);
+                String day = privacies[i].substring(8,10);
+
+                int grade = map.get(privacies[i].substring(11,12));
+                int sum =Integer.parseInt(mon)+grade;
+                int tmp = Integer.parseInt(year)*12*28+sum*28+Integer.parseInt(day);
+                if(todayD>=tmp){
+                    list.add(i+1);
+                }
+            }
+            int[] answer = new int[list.size()];
+            for(int k=0; k< list.size(); k++){
+               answer[k] = list.get(k);
+            }
+        return answer;
+    }
+}
