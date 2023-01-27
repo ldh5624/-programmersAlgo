@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+class Solution {
+    public String solution(String polynomial) {
+      String answer = "";
+        int sum=0;
+        int xsum=0;
+        ArrayList<String> list = new ArrayList<String>();
+        String[] pol = polynomial.split(" ");
+        for(int i=0; i<pol.length; i++){
+            if(pol[i].contains("x")){
+                list.add(pol[i]);
+            }else if(!pol[i].equals("+")){
+                sum+=Integer.parseInt(pol[i]);
+            }
+        }
+        for(int j=0; j<list.size(); j++ ){
+            if(list.get(j).equals("x")){
+                xsum+=1;
+            }else{
+                String[] spl = list.get(j).split("x");
+                 xsum+=Integer.parseInt(spl[0]);
+            }
+        }
+
+        if(sum == 0 && xsum != 1){
+            answer = String.valueOf(xsum) + "x";
+        } else if (xsum == 0) {
+            answer = String.valueOf(sum);
+        } else if(xsum == 1 && sum == 0){
+            answer = "x";
+        } else if(xsum == 1 && sum != 0){
+            answer = "x" + " + " + String.valueOf(sum) ;
+        } else{
+            answer = String.valueOf(xsum) + "x" + " + "+String.valueOf(sum);
+        }
+        return answer;
+    }
+}
