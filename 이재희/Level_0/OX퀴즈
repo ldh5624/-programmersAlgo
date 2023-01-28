@@ -1,0 +1,34 @@
+lass Solution {
+    public String[] solution(String[] quiz) {
+        String[] answer = new String[quiz.length];
+
+        for(int i = 0 ; i < quiz.length; i++){
+            String arr[] = quiz[i].split(" ");
+
+            int a = Integer.valueOf(arr[0]);
+            int b = Integer.valueOf(arr[2]);
+            int c = Integer.valueOf(arr[4]);
+
+            if("+".equals(arr[1])){
+                int tmp = a + b;
+
+                if(tmp == c){
+                    answer[i] = "O";
+                }else{
+                    answer[i] = "X";
+                }
+            }else{
+                int tmp = a - b;
+
+                if(tmp == c){
+                    answer[i] = "O";
+                }else{
+                    answer[i] = "X";
+                }
+            }
+
+        }
+
+        return answer;
+    }
+}
