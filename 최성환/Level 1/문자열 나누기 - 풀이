@@ -1,0 +1,22 @@
+function solution(s) {
+    var answer = 0;
+    var s_arr = [...s]
+    var temp;
+    var cnt = 0;
+    var tmp = 0;
+    for(tmp ; tmp<=[...s].length;tmp++){
+        if(cnt == 0){ 
+            cnt++;
+            answer++;
+            temp = s_arr.shift()
+        }
+        var test = s_arr.shift()
+        if(temp == test){cnt++;}
+        else{cnt--}
+        if(cnt == 0){
+            s=s_arr.join("")
+            tmp = 0;
+        }
+    }
+    return answer;
+}
