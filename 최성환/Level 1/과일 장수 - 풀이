@@ -1,0 +1,11 @@
+function solution(k, m, score) {
+    var answer = 0;
+    score.sort(function(a,b){
+        return b-a
+    })
+    var test = score.splice(score.length-score.length % m,score.length)
+    for(var i=1; i<=score.length/m;i++){
+        answer += m*score[i*m-1]
+    }
+    return answer;
+}
