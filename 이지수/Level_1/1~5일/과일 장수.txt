@@ -1,0 +1,16 @@
+import java.util.Arrays;
+class Solution {
+    public int solution(int k, int m, int[] score) {
+        int answer = 0;
+        int[] box = new int[m];
+        Arrays.sort(score);
+        for(int i = score.length-1; i>=m-1;){
+            for(int j=m; j>0; j--){
+                box[j-1] = score[i];
+                i--;
+            }
+            answer+=box[0]*m;
+        }
+        return answer;
+    }
+}
