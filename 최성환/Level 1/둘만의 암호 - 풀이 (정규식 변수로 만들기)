@@ -1,0 +1,13 @@
+function solution(s, skip, index) {
+    var answer = '';
+    var alpabet='abcdefghijklmnopqrstuvwxyz';
+    var regex = new RegExp('['+skip+']','g');
+    var test = alpabet.replace(regex,"");
+    console.log(test)
+    var s_arr = s.split("");
+    s_arr.map(function(v){
+        var cnt = test.indexOf(v)
+        answer += test[(cnt+index)%(test.length)]
+    })
+    return answer;
+}

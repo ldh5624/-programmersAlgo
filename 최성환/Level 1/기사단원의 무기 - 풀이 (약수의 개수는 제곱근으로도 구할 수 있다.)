@@ -1,0 +1,16 @@
+function solution(k, score) {
+    var answer = [];
+    var test = [];
+    score.map(function(v,w,z){
+        test.push(v)
+        test.sort(function(a,b){
+            return b-a
+        })
+        if(w<k){
+            answer.push(test[test.length-1])   
+        }else{
+            answer.push(test[k-1])
+        }
+    })
+    return answer;
+}

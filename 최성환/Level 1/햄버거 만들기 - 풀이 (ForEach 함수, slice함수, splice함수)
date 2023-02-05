@@ -1,0 +1,12 @@
+function solution(food) {
+    var answer = '';
+    food.map(function(v,w){
+        if(w!=0){
+            for(var i=0;i<Math.floor(v/2);i++){
+                answer += w
+            }
+        }
+    })
+    var reverse_answer = answer.split("").sort(function(a,b){return b-a}).join("")
+    return answer+0+reverse_answer;
+}
