@@ -1,0 +1,11 @@
+function solution(a, b, n) {
+    var answer = 0;
+    var per = 0;
+    while(n >= 1){
+        n=n+per
+        per = n%a
+        n=Math.floor(n/a)*b
+        answer+=n
+    }
+    return answer;
+}
